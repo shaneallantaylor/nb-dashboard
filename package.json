@@ -1,0 +1,24 @@
+{
+  "name": "nb-dashboard",
+  "version": "0.1.0",
+  "description": "A prototype of the custom fields page utilizing React",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaneallantaylor/nb-dashboard.git"
+  },
+  "keywords": [
+    "UI",
+    "UX",
+    "React"
+  ],
+  "author": "Shane Taylor",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shaneallantaylor/nb-dashboard/issues"
+  },
+  "homepage": "https://github.com/shaneallantaylor/nb-dashboard#readme"
+}
