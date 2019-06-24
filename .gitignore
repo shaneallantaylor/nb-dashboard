@@ -63,3 +63,4 @@ typings/
 # Extras
 .DS_Store
 package-lock.json
+fonts/
