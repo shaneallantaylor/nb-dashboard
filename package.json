@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/shaneallantaylor/nb-dashboard/issues"
   },
-  "homepage": "https://github.com/shaneallantaylor/nb-dashboard#readme"
+  "homepage": "https://github.com/shaneallantaylor/nb-dashboard#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2"
+  }
 }

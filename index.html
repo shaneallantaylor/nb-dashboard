@@ -18,6 +18,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 
 <body>
@@ -321,7 +322,7 @@
                 to your
                 networked nations.</p>
             </div>
-            <div class="details-inputs-container">
+            <div class="details-inputs-container" id="input-container">
               <div class="react-container custom-field-inputs mb-5">
                 <div class="input-field-wrapper mt-5">
                   <input type="text" id="name" name="name" class="form-control ds-input col-xs-12 col-s-8 col-md-5" />
@@ -335,9 +336,9 @@
                 <div class="input-field-wrapper mt-5">
                   <select name="field-type" id="field-type" class="sr-only">
                     <option value="" hidden>Select option</option>
-                    <option value="volvo">Text</option>
-                    <option value="saab">Checkbox</option>
-                    <option value="mercedes">Multiple choice</option>
+                    <option value="text">Text</option>
+                    <option value="checkbox">Checkbox</option>
+                    <option value="multiple-choice">Multiple choice</option>
                   </select>
                   <div class="field-type-select-container">
                     <button class="select-option">Select option</button>
@@ -455,7 +456,9 @@
   </main>
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <script src=" ./js/main.js" type="text/javascript"></script>
+  <script src="./react/containers/app.js" type="text/javascript"></script>
+  <!-- <script src="./js/main.js" type="module"></script> -->
+
   <!-- <script src="./js/like_button.js"></script> -->
   </script>
 </body>
