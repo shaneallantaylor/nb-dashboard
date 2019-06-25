@@ -13,6 +13,10 @@
   src: url('./../fonts/ag-reg.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+.--overflow-visible {
+  overflow: visible !important;
+}
+
 
 
 html body {
@@ -165,10 +169,6 @@ a.nav-link {
   color: #1498BE
 }
 
-.section-nav {
-  /* box-shadow: 0px -1px 0px #cccccc inset; */
-}
-
 .section-nav .nav-item {
   width: initial;
   border-left: none;
@@ -286,6 +286,7 @@ a.nav-link {
 }
 
 button.select-option {
+  text-transform: capitalize;
   font-family: "AgReg";
   font-size: 15px;
   width: 100%;
@@ -324,11 +325,17 @@ ul.select-items {
   border: 1px solid #E7E7E7;
 }
 
+ul.select-items.on {
+  display: block;
+}
+
 ul.select-items li {
   font-family: "AgReg";
   font-size: 14px;
   margin: 4px 0;
   padding: 6px;
+  cursor: pointer;
+  text-align: left;
 }
 
 ul.select-items li:hover {
@@ -403,10 +410,18 @@ table tr>:first-child {
 .table .delete-carrot {
   height: 10px;
   width: 20px;
+  position: relative;
 
 }
 
 .table tbody tr:hover .delete-carrot {
+}
+
+.delete-carrot ul.select-items {
+  right: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  width: 187px;
 }
 
 

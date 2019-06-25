@@ -4,7 +4,10 @@
   "description": "A prototype of the custom fields page utilizing React",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "nodemon server/server.js",
+    "build": "webpack",
+    "dev": "webpack-dev-server --open & nodemon server/server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -23,6 +26,21 @@
   "homepage": "https://github.com/shaneallantaylor/nb-dashboard#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+    "babel-preset-react-app": "^3.1.2",
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.35.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "jest": "^24.8.0",
+    "supertest": "^4.0.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2"
   }
 }
