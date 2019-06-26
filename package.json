@@ -4,7 +4,7 @@
   "description": "A prototype of the custom fields page utilizing React",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js --open",
     "build": "webpack",
     "dev": "webpack-dev-server --open & nodemon server/server.js",
     "test": "jest"
