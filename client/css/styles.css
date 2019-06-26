@@ -555,6 +555,10 @@ button.create-field:hover {
   background-color: #2f97bf;
 }
 
+button.create-field.disabled {
+  cursor: not-allowed;
+}
+
 table.table thead th {
   font-family: "AgMed";
   color: #8F8F8F;

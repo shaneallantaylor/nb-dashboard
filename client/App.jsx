@@ -5,6 +5,8 @@ import TextInput from './components/TextInput.jsx';
 import SelectInput from './components/SelectInput.jsx';
 import ConfirmButton from './components/ConfirmButton.jsx';
 
+import cloneDeep from './utilities/cloneDeep.js';
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -96,7 +98,7 @@ class App extends React.Component {
   }
 
   handleDeleteSelection(rowProps) {
-    const newListOfCustomFields = { ...this.state.listOfCustomFields };
+    const newListOfCustomFields = cloneDeep(this.state.listOfCustomFields);
     delete newListOfCustomFields[rowProps.slug];
     this.setState({
       listOfCustomFields: newListOfCustomFields
@@ -109,10 +111,12 @@ class App extends React.Component {
         <div className="custom-field-inputs --px-30 mb-5">
           <TextInput
             id="label"
+            editMode={this.state.editMode}
             label={this.state.label}
             handleChange={this.handleChange} />
           <TextInput
             id="slug"
+            editMode={this.state.editMode}
             label={this.state.slug}
             handleChange={this.handleChange} />
           <SelectInput
@@ -121,6 +125,8 @@ class App extends React.Component {
             toggleMenuOpen={this.toggleMenuOpen}
             handleFieldTypeSelection={this.handleFieldTypeSelection} />
           <ConfirmButton
+            slug={this.state.slug}
+            fieldType={this.state.fieldType}
             editMode={this.state.editMode}
             handleCreateClick={this.handleCreateClick} />
         </div>

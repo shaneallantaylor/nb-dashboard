@@ -4,5 +4,5 @@ import App from './App.jsx';
 
 render(
   <App />,
-  document.getElementById('react-app')
-)
+  document.getElementById('react-app'),
+);

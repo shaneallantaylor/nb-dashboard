@@ -5,7 +5,7 @@ module.exports = {
   entry: path.resolve(__dirname, './client/index.js'),
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   module: {
     rules: [
@@ -15,11 +15,11 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        }
-      }
-    ]
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
+        },
+      },
+    ],
   },
   devServer: {
     publicPath: '/build',
@@ -28,7 +28,7 @@ module.exports = {
     port: 3500,
     proxy: {
       '/static/css': {
-        target: "http://localhost:3000",
+        target: 'http://localhost:3000',
         secure: false,
       },
     },
