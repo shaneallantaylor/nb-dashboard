@@ -12,13 +12,13 @@ class ValuesTable extends React.Component {
     const tableRows = Object.values(this.props.listOfCustomFields).map(object => {
       return <TableRow
         handleEditClick={this.props.handleEditClick}
+        handleDeleteSelection={this.props.handleDeleteSelection}
         label={object.label}
         slug={object.slug}
         fieldType={object.fieldType}
         key={object.slug} />
     })
 
-    console.log('this.props.listOfCustomFields is', Object.values(this.props.listOfCustomFields));
     return (
       <div className="table-responsive-md --overflow-visible">
         <table className="table table-hover">

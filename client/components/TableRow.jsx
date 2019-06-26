@@ -1,7 +1,5 @@
 import React from 'react';
 
-import DropDownIcon from './DropDownIcon.jsx';
-
 class TableRow extends React.Component {
   constructor(props) {
     super(props)
@@ -21,15 +19,14 @@ class TableRow extends React.Component {
     return (
       <React.Fragment>
         <tr>
-          <td className="edit-cell"><a href="#"><span className="edit" title="edit" onClick={this.props.handleEditClick.bind(this, rowProps)}>Edit</span></a></td>
+          <td className="edit-cell"><span className="edit" title="edit" onClick={this.props.handleEditClick.bind(this, rowProps)}>Edit</span></td>
           <td>{this.props.label}</td>
           <td>{this.props.slug}</td>
-          <td>{this.props.fieldType}</td>
+          <td className="field-type">{this.props.fieldType}</td>
           <td className="delete-cell">
-            <button onClick={this.toggleDeleteMenu} className="delete-carrot">
-              <DropDownIcon />
-              <ul className={`select-items delete-menu ${this.state.showDelete ? 'on' : ''}`} >
-                <li data-option="text" onClick={this.props.handleDelectSelection}>Delete</li>
+            <button onClick={this.toggleDeleteMenu} className={`delete-carrot ${this.state.showDelete ? 'open' : ''}`}>
+              <ul className={'select-items delete-menu'} >
+                <li onClick={this.props.handleDeleteSelection.bind(this, rowProps)}>Delete</li>
               </ul>
             </button>
           </td>

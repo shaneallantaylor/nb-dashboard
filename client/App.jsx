@@ -36,8 +36,8 @@ class App extends React.Component {
     this.toggleMenuOpen = this.toggleMenuOpen.bind(this);
     this.handleFieldTypeSelection = this.handleFieldTypeSelection.bind(this);
     this.handleCreateClick = this.handleCreateClick.bind(this);
-    this.handleEditConfirm = this.handleEditConfirm.bind(this);
     this.handleEditClick = this.handleEditClick.bind(this);
+    this.handleDeleteSelection = this.handleDeleteSelection.bind(this);
   }
 
   handleChange(e) {
@@ -53,8 +53,6 @@ class App extends React.Component {
   }
 
   handleFieldTypeSelection(e) {
-    console.log('we handling field type')
-    console.log('e.target. is', e.target.dataset.option);
     this.setState(
       {
         fieldType: e.target.dataset.option,
@@ -66,13 +64,9 @@ class App extends React.Component {
   handleCreateClick() {
     const currentList = { ...this.state.listOfCustomFields };
     const currentSlug = this.state.slug;
-    console.log('confirm button has been clicked');
-    console.log('this.state.listOfCustomFields is', this.state.listOfCustomFields);
     if (currentList[currentSlug]) {
-      console.log('we are trying to edit something');
       delete currentList[currentSlug];
     }
-    console.log('we made it passed the edit check');
     const newListOfCustomFields = {
       [currentSlug]: {
         label: this.state.label,
@@ -92,15 +86,7 @@ class App extends React.Component {
     )
   }
 
-  handleEditConfirm() {
-    const updatedListOfCustomFields = {
-      ...this.state.listOfCustomFields,
-    }
-    this.setState({ shane: true })
-  }
-
   handleEditClick(rowProps) {
-    console.log('rowProps is', rowProps);
     this.setState({
       label: rowProps.label,
       slug: rowProps.slug,
@@ -109,10 +95,18 @@ class App extends React.Component {
     })
   }
 
+  handleDeleteSelection(rowProps) {
+    const newListOfCustomFields = { ...this.state.listOfCustomFields };
+    delete newListOfCustomFields[rowProps.slug];
+    this.setState({
+      listOfCustomFields: newListOfCustomFields
+    });
+  }
+
   render() {
     return (
       <React.Fragment>
-        <div className="custom-field-inputs mb-5">
+        <div className="custom-field-inputs --px-30 mb-5">
           <TextInput
             id="label"
             label={this.state.label}
@@ -128,10 +122,9 @@ class App extends React.Component {
             handleFieldTypeSelection={this.handleFieldTypeSelection} />
           <ConfirmButton
             editMode={this.state.editMode}
-            handleEditConfirm={this.handleEditConfirm}
             handleCreateClick={this.handleCreateClick} />
         </div>
-        <ValuesTable handleEditClick={this.handleEditClick} listOfCustomFields={this.state.listOfCustomFields} />
+        <ValuesTable handleDeleteSelection={this.handleDeleteSelection} handleEditClick={this.handleEditClick} listOfCustomFields={this.state.listOfCustomFields} />
       </React.Fragment>
     )
   }
