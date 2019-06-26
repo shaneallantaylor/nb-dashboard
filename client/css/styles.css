@@ -482,7 +482,7 @@ button.select-option:after {
   top: 50%;
   right: 4px;
   transform: translateY(-50%);
-  background-image: url('./../images/down-carrot-hover.png');
+  background-image: url('./../images/down-carrot.png');
   background-size: initial;
   background-repeat: no-repeat;
   background-position: center;
@@ -630,7 +630,7 @@ table tr>:first-child {
   top: 32%;
   right: 4px;
   transform: translateY(-50%);
-  background-image: url('./../images/down-carrot-hover.png');
+  background-image: url('./../images/down-carrot.png');
   background-size: initial;
   background-repeat: no-repeat;
   background-position: center;
