@@ -13,19 +13,15 @@
 
 import React from 'react';
 
-class ConfirmButton extends React.Component {
-  render() {
-    return (
-      <button
-        type="button"
-        disabled={!(this.props.slug.length > 0 && this.props.fieldType.length > 0)}
-        onClick={this.props.handleCreateClick}
-        className={`create-field ${(this.props.slug.length > 0 && this.props.fieldType.length > 0) ? '' : 'disabled'}`}
-      >
-        {this.props.editMode ? 'Edit field' : 'Create field'}
-      </button>
-    );
-  }
-}
+const ConfirmButton = props => (
+  <button
+    type="button"
+    disabled={!(props.slug.length > 0 && props.fieldType.length > 0)}
+    onClick={props.handleCreateClick}
+    className={`create-field ${(props.slug.length > 0 && props.fieldType.length > 0) ? '' : 'disabled'}`}
+  >
+    {props.editMode ? 'Edit field' : 'Create field'}
+  </button>
+);
 
 export default ConfirmButton;

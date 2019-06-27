@@ -18,17 +18,17 @@ class App extends React.Component {
       editMode: false,
       listOfCustomFields: {
         nationslug: {
-          label: 'Nation slugsss',
+          label: 'Nation slug',
           slug: 'nationslug',
           fieldType: 'Text',
         },
         dns_provider: {
-          label: 'DNS Providerreee',
+          label: 'DNS Provider',
           slug: 'dns_provider',
           fieldType: 'Text',
         },
         web_designer: {
-          label: 'Web designertrer',
+          label: 'Web designer',
           slug: 'web_designer',
           fieldType: 'Checkbox',
         }
