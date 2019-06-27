@@ -261,6 +261,7 @@ input.form-control:focus {
 .avatar img {
   vertical-align: middle;
   vertical-align: -webkit-baseline-middle;
+  cursor: pointer;
 }
 
 /* Page navigation styles  */
