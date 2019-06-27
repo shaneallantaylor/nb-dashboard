@@ -16,10 +16,12 @@
 * JSDoc
 
 :zap: :zap:
+
 There were some stretch features I had in mind that I ran out of time to implement:
 * Testing with Jest and Enzyme
 * PostCSS
 * Deployment with AWS amplify
+
 :zap: :zap:
 
 ## How to view all the content :eyes:
