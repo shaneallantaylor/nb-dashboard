@@ -31,7 +31,7 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-build/*
+
 
 # Dependency directories
 node_modules/
@@ -64,14 +64,4 @@ typings/
 # Extras
 .DS_Store
 package-lock.json
-
-#amplify
-amplify/\#current-cloud-backend
-amplify/.config/local-*
-amplify/backend/amplify-meta.json
-amplify/backend/awscloudformation
 build/
-dist/
-node_modules/
-aws-exports.js
-awsconfiguration.json
